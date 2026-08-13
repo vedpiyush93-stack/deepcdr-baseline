@@ -1,6 +1,12 @@
-# A Simplified Drug-Response Model, with Dropout Intervals
+<div align="center">
 
-> The comparison baseline: a lighter architecture that produces uncertainty by Monte Carlo Dropout.
+<h1>A Simplified Drug-Response Model, with Dropout Intervals</h1>
+
+<p><strong>The comparison baseline: a lighter architecture that produces uncertainty by Monte Carlo Dropout.</strong></p>
+
+<sub>Ved Piyush · PhD in Statistics · University of Nebraska–Lincoln</sub>
+
+</div>
 
 ---
 
@@ -11,6 +17,17 @@ new uncertainty method has to beat.
 
 This repository holds a pared-down version of the drug-response architecture together with that baseline, so the
 comparison against the ensemble Kalman filter method is like-for-like on identical data.
+
+## How it fits together
+
+```mermaid
+flowchart LR
+    A["Drug + cell-line<br/>features"] --> B["Simplified<br/>network"]
+    B --> C["Dropout left on<br/>at prediction"]
+    C --> D["Many forward<br/>passes"]
+    D --> E["Interval<br/>+ coverage"]
+    style C fill:#0b7a64,color:#fff,stroke:#0b7a64
+```
 
 ## What the code does
 
@@ -36,8 +53,6 @@ Uses TensorFlow Probability for the probabilistic layers and RDKit/DeepChem to t
 2. `SimplerCDR_Exact_Network_more_dropout_no_leakage.ipynb` trains without train/test leakage.
 3. `SimpleCDRGCN_Dropout_Intervals.ipynb` produces the Monte Carlo Dropout intervals and coverage.
 
-
-
 ## Where to look first
 
 - **`SimplerDeepCDR/SimpleCDRGCN_Dropout_Intervals.ipynb`** — the Monte Carlo Dropout intervals and their coverage
@@ -54,11 +69,16 @@ Directories marked *exploratory* are earlier iterations kept for provenance. To 
 
 ## Notes
 
-Notebook outputs are committed, so the figures and result tables render on GitHub without running anything. Molecular feature matrices and trained weights are not committed; the feature notebooks rebuild them.
+> Notebook outputs are committed, so the figures and result tables render on GitHub without running anything. Molecular feature matrices and trained weights are not committed; the feature notebooks rebuild them.
 
 Research code from my doctoral work at the University of Nebraska–Lincoln (31 notebooks). Previously hosted at `github.com/Ved-Piyush/DeepCDR_SimpleCDR`.
 
 ---
 
-**Ved Piyush, PhD** · Statistics, University of Nebraska–Lincoln  
-[vedpiyush93@gmail.com](mailto:vedpiyush93@gmail.com) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=657rVYAAAAAJ) · [Website](https://vedpiyush93-stack.github.io)
+<div align="center">
+<sub>
+
+**Ved Piyush, PhD** · [Website](https://vedpiyush93-stack.github.io) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=657rVYAAAAAJ) · [vedpiyush93@gmail.com](mailto:vedpiyush93@gmail.com)
+
+</sub>
+</div>
