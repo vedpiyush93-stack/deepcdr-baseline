@@ -1,0 +1,20 @@
+# notebook + python cruft
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# model artefacts and bulk data are kept out of version control
+*.pb
+*.h5
+*.hdf5
+*.ckpt*
+*.index
+*.data-00000-of-00001
+variables/
+saved_model/
+*.pkl
+*.npy
+*.zip
+*.out
+*.err
