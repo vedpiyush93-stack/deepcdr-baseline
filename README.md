@@ -36,6 +36,22 @@ Uses TensorFlow Probability for the probabilistic layers and RDKit/DeepChem to t
 2. `SimplerCDR_Exact_Network_more_dropout_no_leakage.ipynb` trains without train/test leakage.
 3. `SimpleCDRGCN_Dropout_Intervals.ipynb` produces the Monte Carlo Dropout intervals and coverage.
 
+
+
+## Where to look first
+
+- **`SimplerDeepCDR/SimpleCDRGCN_Dropout_Intervals.ipynb`** — the Monte Carlo Dropout intervals and their coverage
+- **`SimplerDeepCDR/SimplerCDR_Exact_Network_more_dropout_no_leakage.ipynb`** — the leakage-free comparison run
+
+## What is in each directory
+
+| Directory | Files | Purpose |
+|---|---|---|
+| `SimplerDeepCDR` | 12 notebooks, 1 script | the reported baseline runs |
+| `SimplerDeepCDR/Dev_Scripts` <sub>exploratory</sub> | 19 notebooks, 4 scripts | exploratory versions kept for provenance — not needed to reproduce results |
+
+Directories marked *exploratory* are earlier iterations kept for provenance. To reproduce the reported results you need only the 1 core directory above.
+
 ## Notes
 
 Notebook outputs are committed, so the figures and result tables render on GitHub without running anything. Molecular feature matrices and trained weights are not committed; the feature notebooks rebuild them.
